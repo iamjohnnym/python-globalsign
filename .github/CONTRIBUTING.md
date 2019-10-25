@@ -5,33 +5,39 @@ Before sending a Pull Request, please make sure that you're assigned the task on
 - If a relevant issue already exists, discuss on the issue and get it assigned to yourself on GitHub.
 - If no relevant issue exists, open a new issue and get it assigned to yourself on GitHub.
 
-Please proceed with a Pull Request only after you're assigned. It'd be bad time if your Pull Request and your hardwork isn't accepted just because it isn't ideologically compatible.
+Please proceed with a Pull Request only after you're assigned. It'd be bad time if your Pull Request and your hardwork
+isn't accepted just because it isn't ideologically compatible.
 
-# Developing the Project
+## Developing the Project
 
-1. Install with
+### Install
 
-    ```sh
-    git clone https://github.com/iamjohnnym/python-globalsign
-    cd python-globalsign
-    ```
+```sh
+git clone https://github.com/iamjohnnym/python-globalsign
+cd python-globalsign
+```
 
-2. Make your changes in a different git branch (eg, `enhancement/new-feature`). These changes can be
+### Create a PR with your branch
 
-    - enhancing the service
-    - fixing a bug
-    - adding additional tests
+_**Make your changes in a different git branch (eg, `enhancement/new-feature`).**_
 
-3. (Optional) To test whether `python-globalsign` was built successfully.
+- enhancing the service
+- fixing a bug
+- adding additional tests
 
-    ```sh
-    make test
-    ```
+### Test
 
-4. (Required for all changes) Ensure linting is valid
+```sh
+make test
+```
 
-    ```sh
-    make flake
-    ```
+### Validate syntax and security
 
-5. (Required for new steps) Add command to both `.travis.yml` file and `Makefile`.
+```sh
+make flake
+make bandit
+```
+
+### Update Documents
+
+### Update Makefile and CI tools

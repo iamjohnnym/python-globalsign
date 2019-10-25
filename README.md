@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.com/iamjohnnym/python-globalsign.svg?branch=master)](https://travis-ci.com/iamjohnnym/python-globalsign)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4271f43ca98f48258c0a60a89f07743b)](https://www.codacy.com/manual/iamjohnnym/python-globalsign?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iamjohnnym/python-globalsign&amp;utm_campaign=Badge_Grade)
 
-
-
 ## Table of contents
 
 - [Python-Globalsign](#python-globalsign)
@@ -78,7 +76,7 @@ git pull
 
 [(Back to top)](#table-of-contents)
 
-Your contributions are always welcome! Please have a look at the [contribution guidelines](./github/CONTRIBUTING.md) first.
+Your contributions are always welcome! Please have a look at the [contribution guidelines](./.github/CONTRIBUTING.md) first.
 
 ## License
 
