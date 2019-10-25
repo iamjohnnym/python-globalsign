@@ -23,3 +23,7 @@ bandit:
 .PHONY: flake
 flake:
 	poetry run flake8 service
+
+.PHONY: test
+test:
+	poetry run pytest

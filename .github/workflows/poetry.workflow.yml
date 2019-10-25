@@ -26,3 +26,6 @@ jobs:
     - name: Scan for known vulnerabilties
       run: |
         make bandit
+    - name: Run tests with Pytest
+      run: |
+        make test
