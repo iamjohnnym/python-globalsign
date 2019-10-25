@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-globalsign"
+version = "0.1.0"
+description = "Authenticate and interact with the GlobalSign TLS API"
+authors = ["Johnny Martin <johnny@iamjohnnym.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+coverage = "^4.5"
+flake8 = "^3.6"
+bandit = "^1.5"
+codacy-coverage = "^1.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
