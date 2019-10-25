@@ -6,6 +6,7 @@ authors = ["Johnny Martin <johnny@iamjohnnym.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+suds-py3 = "^1.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
