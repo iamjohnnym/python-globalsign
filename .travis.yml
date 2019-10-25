@@ -1,0 +1,33 @@
+language: python
+python:
+  - "3.7"
+
+stages:
+  - Quality
+  - Publish
+
+before_install:
+  - pip install poetry
+
+install:
+  - poetry install
+
+jobs:
+  include:
+    - stage: Quality
+      name: lint
+      script: make flake
+    - name: security
+      script: make bandit
+    - stage: Publish
+      script: skip
+      before_deploy:
+        - poetry config http-basic.pypi $PYPI_USERNAME $PYPI_PASSWORD
+        - poetry build -f sdist
+      deploy:
+        provider: script
+        script: poetry publish
+        skip_cleanup: true
+        on:
+          tags: true
+      if: tag IS present

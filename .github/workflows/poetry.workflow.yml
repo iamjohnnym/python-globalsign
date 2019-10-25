@@ -1,0 +1,28 @@
+name: Python-GlobalSign Linting & Security
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 2
+      matrix:
+        python-version: [3.7]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: dschep/install-poetry-action@v1.1
+    - name: Install dependencies
+      run: |
+        poetry run pip install --upgrade pip
+        poetry install
+    - name: Validate syntax and formatting
+      run: |
+        make flake
+    - name: Scan for known vulnerabilties
+      run: |
+        make bandit
