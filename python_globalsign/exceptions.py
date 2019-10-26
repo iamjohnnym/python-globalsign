@@ -32,8 +32,8 @@ class GlobalSignDomainMissing(Error):
 
 
 class GlobalSignWsdlPathMissing(Error):
-    """Handle exception for missing Globalsign WSDL Url path"""
+    """Handle exception for missing Globalsign Wsdl Url path"""
     def __init__(self):
         # Call the base class constructor with the parameters it needs
-        self.message = "GlobalSign: Missing GlobalSign's WSDL Url Path"
+        self.message = "GlobalSign: Missing GlobalSign's Wsdl Url Path"
         super().__init__(self.message)
